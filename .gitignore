@@ -1,0 +1,16 @@
+# Temporary scratch files and test scripts
+scratch/
+
+# Antigravity & Agent workspace artifacts
+.gemini/
+.system_generated/
+
+# OS metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Log files
+*.log

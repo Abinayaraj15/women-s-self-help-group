@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64" fill="none">
+  <!-- Lotus & Craft Emblem -->
+  <g transform="translate(4, 4)">
+    <!-- Outer Glow / Ring -->
+    <circle cx="28" cy="28" r="26" stroke="url(#goldGradient)" stroke-width="2.5" stroke-dasharray="2 3" opacity="0.85"/>
+    <circle cx="28" cy="28" r="23" fill="url(#bgGradient)"/>
+    
+    <!-- Stylized Lotus / Artisan Wings -->
+    <path d="M28 10 C24 19 21 28 28 39 C35 28 32 19 28 10 Z" fill="url(#lotusCenter)"/>
+    <path d="M26 19 C18 23 12 30 18 39 C24 38 27 31 26 19 Z" fill="url(#lotusPetalLeft)" opacity="0.95"/>
+    <path d="M30 19 C38 23 44 30 38 39 C32 38 29 31 30 19 Z" fill="url(#lotusPetalRight)" opacity="0.95"/>
+    
+    <!-- Base hands / Loom curve -->
+    <path d="M15 37 C22 44 34 44 41 37 C37 42 19 42 15 37 Z" fill="#D97706"/>
+    <!-- Golden Bindi / Sparkle -->
+    <circle cx="28" cy="13" r="2.2" fill="#FDE047"/>
+    <circle cx="28" cy="13" r="1.1" fill="#D97706"/>
+  </g>
+  
+  <!-- HerVana Brand Name -->
+  <text x="68" y="37" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="28" letter-spacing="-0.5" fill="#1E293B">
+    Her<tspan fill="#C85A32">Vana</tspan>
+  </text>
+  
+  <!-- Subtitle Tagline -->
+  <text x="69" y="52" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="9" letter-spacing="1.8" fill="#78350F" text-transform="uppercase">
+    WOMEN SHG MARKETPLACE
+  </text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#C85A32"/>
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <linearGradient id="lotusCenter" x1="28" y1="10" x2="28" y2="39" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#C85A32"/>
+    </linearGradient>
+    <linearGradient id="lotusPetalLeft" x1="12" y1="19" x2="28" y2="39" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+    <linearGradient id="lotusPetalRight" x1="44" y1="19" x2="28" y2="39" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+</svg>

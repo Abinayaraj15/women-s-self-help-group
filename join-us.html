@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us as an SHG Artisan Cooperative | HerVana</title>
+  <meta name="description" content="Register your Women's Self Help Group (SHG) on HerVana. Sell handmade products, handlooms, food products, and crafts directly to conscious customers with zero listing fee.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="apple-touch-icon" href="images/logo-icon.svg">
+<style>
+    /* Real-time Validation Styles */
+    .form-control.is-invalid {
+      border-color: #EF4444 !important;
+      background-color: rgba(239, 68, 68, 0.04) !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+    }
+    .form-control.is-valid {
+      border-color: #10B981 !important;
+      background-color: rgba(16, 185, 129, 0.04) !important;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+    }
+    .form-error-msg {
+      display: none;
+      font-size: 0.8rem;
+      color: #DC2626;
+      margin-top: 0.35rem;
+      font-weight: 600;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .form-error-msg.visible {
+      display: flex;
+    }
+    .form-alert-banner {
+      display: none;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.15rem;
+      margin-bottom: 1.25rem;
+      color: #B91C1C;
+      font-size: 0.88rem;
+      font-weight: 600;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .form-alert-banner.visible {
+      display: flex;
+    }
+    [data-theme="dark"] .form-alert-banner {
+      background: rgba(239, 68, 68, 0.18);
+      border-color: rgba(239, 68, 68, 0.5);
+      color: #FCA5A5;
+    }
+    [data-theme="dark"] .form-error-msg {
+      color: #F87171;
+    }
+    [data-theme="dark"] .form-control.is-invalid {
+      background-color: rgba(239, 68, 68, 0.1) !important;
+    }
+    [data-theme="dark"] .form-control.is-valid {
+      background-color: rgba(16, 185, 129, 0.1) !important;
+    }
+</style>
+</head>
+<body>
+
+  <!-- Sticky Navbar (Keep Only Navbar) -->
+    <!-- Sticky Professional Unified Header (Strictly Single-Line Aligned) -->
+  <header class="site-header">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" title="HerVana - Women SHG Marketplace">
+        <img src="images/logo.svg" alt="HerVana Logo" class="logo-light" onerror="this.src='images/logo.png'">
+        <img src="images/logo-white.svg" alt="HerVana Logo" class="logo-dark" onerror="this.src='images/logo.png'">
+      </a>
+
+      <!-- Desktop Navigation Links (Strictly Aligned on Single Horizontal Line) -->
+      <nav class="desktop-nav">
+        <div class="nav-dropdown-item">
+          <a href="index.html" class="nav-link">
+            <span>Home</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-link">Home (Artisan Market)</a>
+            <a href="home-2.html" class="dropdown-link">Home 2 (Festive & Impact)</a>
+          </div>
+        </div>
+
+        <a href="products.html" class="nav-link">
+          <span>Shop Marketplace</span>
+        </a>
+
+        <div class="nav-dropdown-item">
+          <a href="products.html#categories" class="nav-link">
+            <span>Categories</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+                    <div class="dropdown-menu">
+
+            <a href="products.html?category=textiles#categories" class="dropdown-link">Handloom & Textiles</a>
+
+            <a href="products.html?category=jewellery#categories" class="dropdown-link">Handmade Jewellery</a>
+
+            <a href="products.html?category=food#categories" class="dropdown-link">Homemade Spices & Food</a>
+
+            <a href="products.html?category=pottery#categories" class="dropdown-link">Terracotta & Pottery</a>
+
+            <a href="products.html?category=decor#categories" class="dropdown-link">Home Decor & Metal</a>
+
+            <a href="products.html?category=organic#categories" class="dropdown-link">Ayurvedic & Skincare</a>
+
+            <a href="products.html?category=bamboo#categories" class="dropdown-link">Bamboo & Cane Crafts</a>
+
+          </div>
+        </div>
+
+        <a href="stories.html" class="nav-link">
+          <span>Artisan Stories</span>
+        </a>
+
+        <a href="join-us.html" class="nav-link active">
+          <span>Join as SHG</span>
+        </a>
+
+        <a href="dashboard.html" class="nav-link">
+          <span>SHG Portal</span>
+        </a>
+      </nav>
+
+      <!-- Nav Actions (RTL, Theme, Wishlist, Cart, Profile, Sell CTA) -->
+      <div class="nav-actions">
+
+        <!-- RTL Toggle Button -->
+        <button type="button" class="icon-btn rtl-toggle-btn" title="Toggle RTL / LTR Direction" aria-label="Toggle RTL layout direction">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+        </button>
+
+        <!-- Dark / Light Theme Toggle Button -->
+        <button type="button" class="icon-btn theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle Dark and Light theme">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Wishlist -->
+        <button type="button" class="icon-btn wishlist-open-trigger" title="Saved Wishlist" aria-label="Wishlist">
+          <svg width="19" height="19" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          <span class="icon-badge wishlist-count-badge">2</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button type="button" class="icon-btn cart-open-trigger" title="Shopping Cart" aria-label="Cart">
+          <svg width="19" height="19" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="icon-badge cart-count-badge">2</span>
+        </button>
+
+        <!-- Account / Login -->
+        <a href="login.html" class="icon-btn" title="Account / Login" aria-label="Account Login">
+          <svg width="19" height="19" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+        </a>
+
+        <!-- Sell CTA -->
+        <a href="join-us.html" class="btn-sell" title="Register your SHG group">
+          <span>Sell on HerVana</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+</header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-content">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <a href="index.html" class="brand-logo">
+            <img src="images/logo.svg" alt="HerVana" class="logo-light" style="height:38px;">
+            <img src="images/logo-white.svg" alt="HerVana" class="logo-dark" style="height:38px;">
+          </a>
+          <button type="button" class="mobile-drawer-close" style="font-size:1.5rem; color:#64748B;">&times;</button>
+        </div>
+        <div class="mobile-menu-links">
+          <a href="index.html" class="mobile-menu-link">Home (Artisan Market)</a>
+          <a href="home-2.html" class="mobile-menu-link">Home 2 (Festive & Impact)</a>
+          <a href="products.html" class="mobile-menu-link">Shop Marketplace</a>
+          <a href="stories.html" class="mobile-menu-link">Artisan Stories</a>
+          <a href="join-us.html" class="mobile-menu-link active">Join as SHG Artisan</a>
+          <a href="dashboard.html" class="mobile-menu-link">SHG Seller Dashboard</a>
+          <a href="orders.html" class="mobile-menu-link">Manage Orders</a>
+          <a href="earnings.html" class="mobile-menu-link">Earnings & Payouts</a>
+          <a href="login.html" class="mobile-menu-link">Login / Account</a>
+        </div>
+        <div style="display:flex; gap:0.5rem; margin-top:1.25rem;">
+          <button type="button" class="btn btn-secondary btn-sm rtl-toggle-btn" style="flex:1; font-size:0.8rem;">
+            ⇄ RTL / LTR
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm theme-toggle-btn" style="flex:1; font-size:0.8rem;">
+            🌓 Dark / Light
+          </button>
+        </div>
+      </div>
+      <div style="padding-top:1.5rem; border-top:1px solid #E2E8F0;">
+        <a href="join-us.html" class="btn btn-primary btn-block">Sell as SHG Group</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified Hero Section for Join as SHG / Seller Portal (Standard 600px Size) -->
+  <section class="hero-section hero-join" style="background-image: url('images/hero-join-artisan.jpg'); background-position: center right; background-size: cover; background-repeat: no-repeat; min-height: 600px; position: relative;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-container" style="position: relative; z-index: 10;">
+      <div class="hero-content" style="max-width: 740px; position: relative; z-index: 10;">
+        <div class="hero-tag hero-anim-item" style="--anim-delay: 0.1s; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(245, 158, 11, 0.5); color: #FEF3C7; box-shadow: 0 4px 16px rgba(0,0,0,0.35);">
+          <span class="pulse-indicator"></span>
+          <span>NRLM &amp; State Rural Livelihood Partner • 14,000+ Women Enrolled</span>
+        </div>
+        <h1 class="hero-title hero-anim-item" style="--anim-delay: 0.25s; font-size: 3.2rem; color: #FFFFFF; text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9), 0 1px 4px rgba(0,0,0,0.9); line-height: 1.18; margin-bottom: 1.25rem;">
+          Empower Your Women's SHG, <span class="shimmer-text" style="color: #FDE047 !important; -webkit-text-fill-color: #FDE047 !important; background: none !important; text-shadow: 0 2px 4px #000000, 0 3px 14px rgba(0, 0, 0, 0.95), 0 0 25px rgba(245, 158, 11, 0.85), 0 0 45px rgba(253, 224, 71, 0.5) !important; font-style: italic; font-weight: 700; display: inline-block;">Sell Directly Across India.</span>
+        </h1>
+        <p class="hero-desc hero-anim-item" style="--anim-delay: 0.4s; color: #F8FAFC; font-size: 1.15rem; line-height: 1.75; font-weight: 450; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85); max-width: 660px; margin-bottom: 2rem;">
+          HerVana enables rural women craftswomen, handloom weavers, and food makers to earn directly with <strong>0% upfront listing fees</strong>, village doorstep courier pickup, and guaranteed direct bank payouts.
+        </p>
+        <div class="hero-btns hero-anim-item" style="--anim-delay: 0.55s; display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.2rem;">
+          <a href="#registration-wizard" class="btn btn-primary btn-glow" style="padding: 0.85rem 1.85rem; font-size: 1.05rem;">
+            <span>Register Your SHG Now</span>
+            <svg class="btn-arrow" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="#shg-benefits" class="btn btn-secondary btn-glass" style="padding: 0.85rem 1.85rem; font-size: 1.05rem;">
+            <span>View SHG Benefits</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </a>
+        </div>
+        <div class="hero-stats-row hero-anim-item" style="--anim-delay: 0.7s; background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: var(--radius-lg); padding: 1.25rem 1.75rem; border: 1px solid rgba(255, 255, 255, 0.18); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35); max-width: 720px; display: flex; justify-content: space-between;">
+          <div class="hero-stat-item">
+            <div class="stat-num" style="color: #FCD34D; font-size: 2rem; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">0%</div>
+            <div class="stat-label" style="color: #F8FAFC; font-size: 0.82rem; font-weight: 600;">Listing Fee</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num" style="color: #FCD34D; font-size: 2rem; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">₹4.2 Cr+</div>
+            <div class="stat-label" style="color: #F8FAFC; font-size: 0.82rem; font-weight: 600;">Paid to Artisans</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num" style="color: #FCD34D; font-size: 2rem; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">14,000+</div>
+            <div class="stat-label" style="color: #F8FAFC; font-size: 0.82rem; font-weight: 600;">Women Members</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num" style="color: #FCD34D; font-size: 2rem; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">48 Hrs</div>
+            <div class="stat-label" style="color: #F8FAFC; font-size: 0.82rem; font-weight: 600;">Bank Settlement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Grid -->
+  <section id="shg-benefits" class="section-padding" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Why Partner With HerVana</span>
+        <h2 class="section-title">Designed for Rural Women Cooperatives</h2>
+      </div>
+
+      <div class="shg-benefits-grid">
+        <div style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem 1.5rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💰</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">Zero Listing Fee</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">List as many handmade products as you craft. No hidden charges or setup costs.</p>
+        </div>
+
+        <div style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem 1.5rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏦</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">Direct Bank Payouts</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Earnings transfer directly to your SHG's village cooperative bank account.</p>
+        </div>
+
+        <div style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem 1.5rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚚</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">Village Doorstep Pickup</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Our courier partners collect packed parcels directly from your village center.</p>
+        </div>
+
+        <div style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem 1.5rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📦</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">Packaging & Photo Support</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">We provide eco-friendly packaging materials and assist with product photography.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Registration Form Wizard -->
+  <section id="registration-wizard" class="section-padding" style="scroll-margin-top: 85px;">
+    <div class="container" style="max-width: 820px;">
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 3rem 2.5rem; box-shadow: var(--shadow-lg);">
+        
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem;">
+            Register Your Self Help Group
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Takes just 4 minutes. A local field coordinator will verify your group details.
+          </p>
+        </div>
+
+        <!-- Progress Steps -->
+        <div class="join-steps-progress">
+          <div class="step-item active" id="stepIndicator1">
+            <div class="step-circle">1</div>
+            <div class="step-label">SHG Details</div>
+          </div>
+          <div class="step-item" id="stepIndicator2">
+            <div class="step-circle">2</div>
+            <div class="step-label">Leader & Bank</div>
+          </div>
+          <div class="step-item" id="stepIndicator3">
+            <div class="step-circle">3</div>
+            <div class="step-label">Products & Craft</div>
+          </div>
+        </div>
+
+        <!-- Form Elements -->
+        <form id="shgRegistrationForm" onsubmit="handleSHGSubmit(event)" novalidate>
+          
+          <!-- Step 1 Content -->
+          <div id="stepSection1">
+            <div id="step1Alert" class="form-alert-banner"></div>
+            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--primary);">
+              Step 1: Group &amp; Location Information
+            </h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="form-group" style="grid-column: span 2;">
+                <label class="form-label" for="shgName">Self Help Group (SHG) Name *</label>
+                <input type="text" id="shgName" class="form-control" placeholder="e.g. Lakshmi Mahila Bachat Gat" required>
+                <span class="form-error-msg" id="shgNameError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter a valid SHG group name (at least 3 characters).
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="nrlmReg">NRLM / Cooperative Reg. Number (Optional)</label>
+                <input type="text" id="nrlmReg" class="form-control" placeholder="e.g. MH/2021/NRLM/4892">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="yearFormed">Year Group Was Formed *</label>
+                <select id="yearFormed" class="form-control" required>
+                  <option value="">Select Year</option>
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021-earlier">2021 or Earlier</option>
+                </select>
+                <span class="form-error-msg" id="yearFormedError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please select the year your group was formed.
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="shgState">State *</label>
+                <select id="shgState" class="form-control" required>
+                  <option value="">Select State</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="West Bengal">West Bengal</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Other">Other State</option>
+                </select>
+                <span class="form-error-msg" id="shgStateError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please select your state.
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="shgDistrict">District &amp; Village / Town *</label>
+                <input type="text" id="shgDistrict" class="form-control" placeholder="e.g. Wardha, Seloo Village" required>
+                <span class="form-error-msg" id="shgDistrictError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter your district and village/town (at least 3 characters).
+                </span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; text-align: right;">
+              <button type="button" class="btn btn-primary" onclick="nextStep(2)">
+                <span>Next: Leader &amp; Bank Details</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 Content -->
+          <div id="stepSection2" style="display: none;">
+            <div id="step2Alert" class="form-alert-banner"></div>
+            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--primary);">
+              Step 2: Group Leader &amp; Banking Details
+            </h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="leaderName">Leader / Representative Name *</label>
+                <input type="text" id="leaderName" class="form-control" placeholder="e.g. Radha Devi" required>
+                <span class="form-error-msg" id="leaderNameError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter a valid full name (letters only, min 2 characters).
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="leaderEmail">Leader / Official SHG Email Address *</label>
+                <input type="email" id="leaderEmail" class="form-control" placeholder="e.g. radha.shg@gmail.com" required>
+                <span class="form-error-msg" id="leaderEmailError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter a valid email address (e.g. name@domain.com).
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="leaderPhone">Contact Phone / WhatsApp Number *</label>
+                <input type="tel" id="leaderPhone" class="form-control" placeholder="e.g. 9876543210 or +91 98765 43210" required>
+                <span class="form-error-msg" id="leaderPhoneError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter a valid 10-digit mobile number (e.g. 9876543210).
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="memberCount">Total Women Members in SHG *</label>
+                <input type="number" id="memberCount" class="form-control" placeholder="e.g. 15" min="5" required>
+                <span class="form-error-msg" id="memberCountError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  SHG collectives must have at least 5 registered women members.
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bankName">Bank Name *</label>
+                <input type="text" id="bankName" class="form-control" placeholder="e.g. State Bank of India" required>
+                <span class="form-error-msg" id="bankNameError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter the name of your cooperative's bank.
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bankAccount">SHG Bank Account Number *</label>
+                <input type="password" id="bankAccount" class="form-control" placeholder="9 to 18 digits account number" required>
+                <span class="form-error-msg" id="bankAccountError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter a valid bank account number (9 to 18 digits).
+                </span>
+              </div>
+
+              <div class="form-group" style="grid-column: span 2;">
+                <label class="form-label" for="bankIfsc">Bank IFSC Code *</label>
+                <input type="text" id="bankIfsc" class="form-control" placeholder="e.g. SBIN0001234" maxlength="11" style="text-transform: uppercase;" required>
+                <span class="form-error-msg" id="bankIfscError">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Please enter a valid 11-character IFSC code (e.g. SBIN0001234).
+                </span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between;">
+              <button type="button" class="btn btn-secondary" onclick="goToStep(1)">Back</button>
+              <button type="button" class="btn btn-primary" onclick="nextStep(3)">
+                <span>Next: Products &amp; Craft</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 Content -->
+          <div id="stepSection3" style="display: none;">
+            <div id="step3Alert" class="form-alert-banner"></div>
+            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--primary);">
+              Step 3: What Do Your Group Artisans Create?
+            </h4>
+            <div class="form-group">
+              <label class="form-label" for="craftCategory">Primary Craft / Product Category *</label>
+              <select id="craftCategory" class="form-control" required>
+                <option value="">Select Primary Craft Category</option>
+                <option value="textiles">Handloom Weaving &amp; Sarees</option>
+                <option value="pottery">Terracotta, Pottery &amp; Clay Work</option>
+                <option value="food">Homemade Spices, Pickles, Honey &amp; Snacks</option>
+                <option value="jewellery">Handmade Jewellery &amp; Beaded Art</option>
+                <option value="bamboo">Bamboo, Cane &amp; Grass Weaves</option>
+                <option value="organic">Ayurvedic Soaps, Oils &amp; Natural Skincare</option>
+                <option value="decor">Folk Art &amp; Metal Decor</option>
+              </select>
+              <span class="form-error-msg" id="craftCategoryError">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Please select your primary craft category.
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="craftDescription">Brief Description of Your Products &amp; Techniques *</label>
+              <textarea id="craftDescription" class="form-control" rows="3" placeholder="Tell us about the raw materials you use, your heritage weaving/crafting technique, and monthly capacity (min 15 characters)..." required></textarea>
+              <span class="form-error-msg" id="craftDescriptionError">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Please provide a brief description of your craft products (min 15 characters).
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Upload Sample Photos of Products (Simulated)</label>
+              <div style="border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 2rem; text-align: center; background: var(--bg-page); cursor: pointer;" onclick="document.getElementById('fileUploadSim').click()">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📸</div>
+                <div style="font-weight: 700; color: var(--primary); font-size: 0.95rem;">Click to upload photos of your handicrafts or food items</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Supports JPG, PNG up to 10MB each</div>
+                <input type="file" id="fileUploadSim" style="display: none;" onchange="alert('Photo selected: ' + this.files[0]?.name)">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+              <label style="display: flex; align-items: flex-start; gap: 0.65rem; cursor: pointer; font-size: 0.9rem; color: var(--text-main);">
+                <input type="checkbox" id="shgDeclaration" style="width: 18px; height: 18px; margin-top: 2px; accent-color: var(--primary);" required>
+                <span>I hereby declare that our Self Help Group is officially formed by rural women members and all products listed on HerVana are authentically handcrafted or farm-processed by our group. *</span>
+              </label>
+              <span class="form-error-msg" id="shgDeclarationError">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Please accept the SHG artisan declaration to submit the registration.
+              </span>
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+              <button type="button" class="btn btn-secondary" onclick="goToStep(2)">Back</button>
+              <button type="submit" class="btn btn-gold">
+                <span>Submit SHG Registration Application</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding" style="background: var(--bg-surface);"
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions for SHGs</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <details style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+          <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-main);">Does our SHG need a GST number to sell on HerVana?</summary>
+          <p style="margin-top: 0.75rem; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+            Under Indian GST regulations for artisan handlooms and rural micro-cooperatives with annual turnover below ₹20 Lakhs, an SHG can register with their PAN and village panchayat certificate without GST.
+          </p>
+        </details>
+
+        <details style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+          <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-main);">How do customers receive products from remote rural villages?</summary>
+          <p style="margin-top: 0.75rem; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+            HerVana has tied up with India Post (Speed Post) and leading rural logistics partners. When an order arrives, you pack it with the provided labels, and the local courier collects it directly from your village coordinator.
+          </p>
+        </details>
+
+        <details style="background: var(--bg-page); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+          <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-main);">When and how does the group receive payment?</summary>
+          <p style="margin-top: 0.75rem; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+            Payments are cleared directly into your registered cooperative bank account within 3 business days of the customer receiving the order, with zero intermediary deduction.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom:0.75rem;">
+            <img src="images/logo-white.svg" alt="HerVana" style="height:44px;">
+          </a>
+          <p>
+            HerVana is India's dedicated marketplace for rural Women Self Help Groups (SHGs). 
+            Connecting skilled women craftspeople directly with conscious consumers worldwide.
+          </p>
+          <div class="footer-gov-badges">
+            <span class="footer-badge-pill">🇮🇳 Make in India</span>
+            <span class="footer-badge-pill">Vocal for Local</span>
+            <span class="footer-badge-pill">NRLM Aligned</span>
+          </div>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="social-icon-btn" aria-label="Follow HerVana on Instagram" title="Instagram" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" class="social-icon-btn" aria-label="Follow HerVana on Facebook" title="Facebook" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            </a>
+            <a href="https://youtube.com" class="social-icon-btn" aria-label="Watch HerVana Artisan Stories on YouTube" title="YouTube" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://twitter.com" class="social-icon-btn" aria-label="Follow HerVana on X" title="X (Twitter)" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" class="social-icon-btn" aria-label="Connect on LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Handmade Products</a></li>
+            <li><a href="products.html?category=textiles#categories">Handloom Sarees</a></li>
+            <li><a href="products.html?category=pottery#categories">Terracotta Pottery</a></li>
+            <li><a href="products.html?category=food#categories">Spices & Organic Honey</a></li>
+            <li><a href="products.html?category=jewellery#categories">Handmade Jewellery</a></li>
+          </ul>
+        </div>
+
+        <!-- SHG Artisan Links -->
+        <div>
+          <h4 class="footer-title">For Women SHGs</h4>
+          <ul class="footer-links">
+            <li><a href="join-us.html">Register Your SHG</a></li>
+            <li><a href="login.html">SHG Artisan Portal</a></li>
+            <li><a href="dashboard.html">Seller Dashboard Demo</a></li>
+            <li><a href="orders.html">Order Fulfillment</a></li>
+            <li><a href="earnings.html">Bank Payouts & History</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="footer-title">Artisan Newsletter</h4>
+          <p style="font-size:0.88rem; color:#9CA3AF; margin-bottom:1rem;">
+            Subscribe to receive stories of Indian women craftspeople, seasonal harvest alerts, and festival collections.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 HerVana Marketplace. Built with pride for India's Women Entrepreneurs.</div>
+        <div style="display:flex; gap:1.5rem; flex-wrap:wrap;">
+          <a href="fair-trade.html">Fair Trade Policy</a>
+          <a href="privacy.html">Privacy Notice</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="oauth-guide.html">OAuth Integration Guide</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/script.js"></script>
+  <script>
+    // Validation Helper Functions
+    function setFieldState(inputEl, errorEl, isValid, message) {
+      if (!inputEl) return isValid;
+      if (isValid) {
+        inputEl.classList.remove('is-invalid');
+        inputEl.classList.add('is-valid');
+        if (errorEl) {
+          errorEl.classList.remove('visible');
+        }
+      } else {
+        inputEl.classList.remove('is-valid');
+        inputEl.classList.add('is-invalid');
+        if (errorEl) {
+          if (message) {
+            errorEl.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> ' + message;
+          }
+          errorEl.classList.add('visible');
+        }
+      }
+      return isValid;
+    }
+
+    function showAlertBanner(bannerId, message) {
+      const banner = document.getElementById(bannerId);
+      if (banner) {
+        banner.innerHTML = '<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg> <span>' + message + '</span>';
+        banner.classList.add('visible');
+      }
+    }
+
+    function hideAlertBanner(bannerId) {
+      const banner = document.getElementById(bannerId);
+      if (banner) {
+        banner.classList.remove('visible');
+        banner.innerHTML = '';
+      }
+    }
+
+    // Step 1 Validation
+    function validateStep1(showErrors = true) {
+      let valid = true;
+      let firstInvalid = null;
+
+      const shgName = document.getElementById('shgName');
+      const shgNameError = document.getElementById('shgNameError');
+      const isShgNameValid = shgName && shgName.value.trim().length >= 3;
+      if (!setFieldState(shgName, shgNameError, isShgNameValid, 'Please enter a valid SHG name (at least 3 characters).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = shgName;
+      }
+
+      const yearFormed = document.getElementById('yearFormed');
+      const yearFormedError = document.getElementById('yearFormedError');
+      const isYearValid = yearFormed && yearFormed.value !== '';
+      if (!setFieldState(yearFormed, yearFormedError, isYearValid, 'Please select the year your group was formed.')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = yearFormed;
+      }
+
+      const shgState = document.getElementById('shgState');
+      const shgStateError = document.getElementById('shgStateError');
+      const isStateValid = shgState && shgState.value !== '';
+      if (!setFieldState(shgState, shgStateError, isStateValid, 'Please select your state.')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = shgState;
+      }
+
+      const shgDistrict = document.getElementById('shgDistrict');
+      const shgDistrictError = document.getElementById('shgDistrictError');
+      const isDistrictValid = shgDistrict && shgDistrict.value.trim().length >= 3;
+      if (!setFieldState(shgDistrict, shgDistrictError, isDistrictValid, 'Please enter your district and village (at least 3 characters).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = shgDistrict;
+      }
+
+      if (!valid && showErrors) {
+        showAlertBanner('step1Alert', 'Please provide valid group and location details before continuing.');
+        if (firstInvalid) { firstInvalid.focus(); firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" }); }
+      } else {
+        hideAlertBanner('step1Alert');
+      }
+
+      return valid;
+    }
+
+    // Step 2 Validation (Leader, Email, Phone, Banking)
+    function validateStep2(showErrors = true) {
+      let valid = true;
+      let firstInvalid = null;
+
+      // Leader Name: letters, dots, spaces, apostrophes only, min 2 chars
+      const leaderName = document.getElementById('leaderName');
+      const leaderNameError = document.getElementById('leaderNameError');
+      const nameVal = leaderName ? leaderName.value.trim() : '';
+      const namePattern = /^[a-zA-Z\s.']{2,60}$/;
+      const isNameValid = nameVal.length >= 2 && namePattern.test(nameVal);
+      if (!setFieldState(leaderName, leaderNameError, isNameValid, 'Please enter a valid leader name (letters only, min 2 characters).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = leaderName;
+      }
+
+      // Leader Email: valid email address
+      const leaderEmail = document.getElementById('leaderEmail');
+      const leaderEmailError = document.getElementById('leaderEmailError');
+      const emailVal = leaderEmail ? leaderEmail.value.trim() : '';
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const isEmailValid = emailPattern.test(emailVal);
+      if (!setFieldState(leaderEmail, leaderEmailError, isEmailValid, 'Please enter a valid email address (e.g. name@gmail.com).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = leaderEmail;
+      }
+
+      // Leader Phone: 10 digit Indian mobile number (optional +91 or 0 prefix)
+      const leaderPhone = document.getElementById('leaderPhone');
+      const leaderPhoneError = document.getElementById('leaderPhoneError');
+      const rawPhone = leaderPhone ? leaderPhone.value.trim() : '';
+      const cleanPhone = rawPhone.replace(/[\s\-+]/g, '').replace(/^91/, '').replace(/^0/, '');
+      const phonePattern = /^[6-9]\d{9}$/;
+      const isPhoneValid = phonePattern.test(cleanPhone);
+      if (!setFieldState(leaderPhone, leaderPhoneError, isPhoneValid, 'Please enter a valid 10-digit mobile number (e.g. 9876543210).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = leaderPhone;
+      }
+
+      // Member Count: >= 5
+      const memberCount = document.getElementById('memberCount');
+      const memberCountError = document.getElementById('memberCountError');
+      const members = memberCount ? parseInt(memberCount.value, 10) : 0;
+      const isMembersValid = !isNaN(members) && members >= 5;
+      if (!setFieldState(memberCount, memberCountError, isMembersValid, 'SHG collectives must have at least 5 registered women members.')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = memberCount;
+      }
+
+      // Bank Name: min 3 chars
+      const bankName = document.getElementById('bankName');
+      const bankNameError = document.getElementById('bankNameError');
+      const isBankNameValid = bankName && bankName.value.trim().length >= 3;
+      if (!setFieldState(bankName, bankNameError, isBankNameValid, 'Please enter the name of your cooperative\'s bank.')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = bankName;
+      }
+
+      // Bank Account Number: 9 to 18 digits
+      const bankAccount = document.getElementById('bankAccount');
+      const bankAccountError = document.getElementById('bankAccountError');
+      const acctVal = bankAccount ? bankAccount.value.trim() : '';
+      const isAccountValid = /^\d{9,18}$/.test(acctVal);
+      if (!setFieldState(bankAccount, bankAccountError, isAccountValid, 'Please enter a valid bank account number (9 to 18 digits).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = bankAccount;
+      }
+
+      // Bank IFSC Code: 11 characters (4 letters, 0, 6 alphanumeric)
+      const bankIfsc = document.getElementById('bankIfsc');
+      const bankIfscError = document.getElementById('bankIfscError');
+      const ifscVal = bankIfsc ? bankIfsc.value.trim().toUpperCase() : '';
+      if (bankIfsc) bankIfsc.value = ifscVal;
+      const isIfscValid = /^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifscVal);
+      if (!setFieldState(bankIfsc, bankIfscError, isIfscValid, 'Please enter a valid 11-character IFSC code (e.g. SBIN0001234).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = bankIfsc;
+      }
+
+      if (!valid && showErrors) {
+        showAlertBanner('step2Alert', 'Please correct the invalid fields (name, email, phone, or bank details) before continuing.');
+        if (firstInvalid) { firstInvalid.focus(); firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" }); }
+      } else {
+        hideAlertBanner('step2Alert');
+      }
+
+      return valid;
+    }
+
+    // Step 3 Validation
+    function validateStep3(showErrors = true) {
+      let valid = true;
+      let firstInvalid = null;
+
+      const craftCategory = document.getElementById('craftCategory');
+      const craftCategoryError = document.getElementById('craftCategoryError');
+      const isCategoryValid = craftCategory && craftCategory.value !== '';
+      if (!setFieldState(craftCategory, craftCategoryError, isCategoryValid, 'Please select your primary craft category.')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = craftCategory;
+      }
+
+      const craftDescription = document.getElementById('craftDescription');
+      const craftDescriptionError = document.getElementById('craftDescriptionError');
+      const descVal = craftDescription ? craftDescription.value.trim() : '';
+      const isDescValid = descVal.length >= 15;
+      if (!setFieldState(craftDescription, craftDescriptionError, isDescValid, 'Please provide a brief description of your craft products (min 15 characters).')) {
+        valid = false;
+        if (!firstInvalid) firstInvalid = craftDescription;
+      }
+
+      const shgDeclaration = document.getElementById('shgDeclaration');
+      const shgDeclarationError = document.getElementById('shgDeclarationError');
+      const isDeclared = shgDeclaration && shgDeclaration.checked;
+      if (!isDeclared) {
+        valid = false;
+        if (shgDeclarationError) shgDeclarationError.classList.add('visible');
+        if (!firstInvalid) firstInvalid = shgDeclaration;
+      } else {
+        if (shgDeclarationError) shgDeclarationError.classList.remove('visible');
+      }
+
+      if (!valid && showErrors) {
+        showAlertBanner('step3Alert', 'Please complete the product details and accept the declaration.');
+        if (firstInvalid) { firstInvalid.focus(); firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" }); }
+      } else {
+        hideAlertBanner('step3Alert');
+      }
+
+      return valid;
+    }
+
+    // Navigation Between Steps with Validation
+    function nextStep(targetStep) {
+      if (targetStep === 2) {
+        if (!validateStep1(true)) return;
+      } else if (targetStep === 3) {
+        if (!validateStep2(true)) return;
+      }
+      goToStep(targetStep);
+    }
+
+    function goToStep(stepNum) {
+      document.getElementById('stepSection1').style.display = stepNum === 1 ? 'block' : 'none';
+      document.getElementById('stepSection2').style.display = stepNum === 2 ? 'block' : 'none';
+      document.getElementById('stepSection3').style.display = stepNum === 3 ? 'block' : 'none';
+
+      for (let i = 1; i <= 3; i++) {
+        const ind = document.getElementById('stepIndicator' + i);
+        if (i < stepNum) {
+          ind.className = 'step-item completed';
+        } else if (i === stepNum) {
+          ind.className = 'step-item active';
+        } else {
+          ind.className = 'step-item';
+        }
+      }
+      // Smoothly scroll directly to the registration wizard form, keeping steps in view and never jumping to hero
+      const wizardSection = document.getElementById('registration-wizard') || document.querySelector('.join-steps-progress');
+      if (wizardSection) {
+        const headerOffset = 85;
+        const elementPosition = wizardSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Submit Handler with Full Verification
+    function handleSHGSubmit(e) {
+      e.preventDefault();
+
+      if (!validateStep1(true)) {
+        goToStep(1);
+        showAlertBanner('step1Alert', 'Please correct the invalid group details before submitting.');
+        return;
+      }
+      if (!validateStep2(true)) {
+        goToStep(2);
+        showAlertBanner('step2Alert', 'Please correct the invalid leader name, email, phone number, or banking details.');
+        return;
+      }
+      if (!validateStep3(true)) {
+        goToStep(3);
+        showAlertBanner('step3Alert', 'Please complete the craft information and check the declaration.');
+        return;
+      }
+
+      const group = document.getElementById('shgName')?.value || 'Your SHG';
+      const leader = document.getElementById('leaderName')?.value || 'Leader';
+      const email = document.getElementById('leaderEmail')?.value || '';
+      const phone = document.getElementById('leaderPhone')?.value || '';
+
+      alert('🎉 SHG Registration Application Submitted Successfully!\n\n' +
+            '• Application Reference: #SHG-IN-2026-894\n' +
+            '• Self Help Group: ' + group + '\n' +
+            '• Representative: ' + leader + '\n' +
+            '• Contact Email: ' + email + '\n' +
+            '• Contact Mobile: ' + phone + '\n\n' +
+            'Our rural field coordinator will contact ' + leader + ' within 48 hours for village onboarding.');
+
+      window.location.href = 'dashboard.html';
+    }
+
+    // Attach Real-Time Validation Listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      // Step 1 Listeners
+      const shgName = document.getElementById('shgName');
+      if (shgName) {
+        shgName.addEventListener('input', () => validateStep1(false));
+        shgName.addEventListener('blur', () => validateStep1(true));
+      }
+      const yearFormed = document.getElementById('yearFormed');
+      if (yearFormed) {
+        yearFormed.addEventListener('change', () => validateStep1(false));
+      }
+      const shgState = document.getElementById('shgState');
+      if (shgState) {
+        shgState.addEventListener('change', () => validateStep1(false));
+      }
+      const shgDistrict = document.getElementById('shgDistrict');
+      if (shgDistrict) {
+        shgDistrict.addEventListener('input', () => validateStep1(false));
+        shgDistrict.addEventListener('blur', () => validateStep1(true));
+      }
+
+      // Step 2 Listeners (Name, Email, Phone, Bank)
+      const leaderName = document.getElementById('leaderName');
+      if (leaderName) {
+        leaderName.addEventListener('input', () => validateStep2(false));
+        leaderName.addEventListener('blur', () => validateStep2(true));
+      }
+      const leaderEmail = document.getElementById('leaderEmail');
+      if (leaderEmail) {
+        leaderEmail.addEventListener('input', () => validateStep2(false));
+        leaderEmail.addEventListener('blur', () => validateStep2(true));
+      }
+      const leaderPhone = document.getElementById('leaderPhone');
+      if (leaderPhone) {
+        leaderPhone.addEventListener('input', () => validateStep2(false));
+        leaderPhone.addEventListener('blur', () => validateStep2(true));
+      }
+      const memberCount = document.getElementById('memberCount');
+      if (memberCount) {
+        memberCount.addEventListener('input', () => validateStep2(false));
+        memberCount.addEventListener('blur', () => validateStep2(true));
+      }
+      const bankName = document.getElementById('bankName');
+      if (bankName) {
+        bankName.addEventListener('input', () => validateStep2(false));
+        bankName.addEventListener('blur', () => validateStep2(true));
+      }
+      const bankAccount = document.getElementById('bankAccount');
+      if (bankAccount) {
+        bankAccount.addEventListener('input', () => validateStep2(false));
+        bankAccount.addEventListener('blur', () => validateStep2(true));
+      }
+      const bankIfsc = document.getElementById('bankIfsc');
+      if (bankIfsc) {
+        bankIfsc.addEventListener('input', function() {
+          this.value = this.value.toUpperCase();
+          validateStep2(false);
+        });
+        bankIfsc.addEventListener('blur', () => validateStep2(true));
+      }
+
+      // Step 3 Listeners
+      const craftCategory = document.getElementById('craftCategory');
+      if (craftCategory) {
+        craftCategory.addEventListener('change', () => validateStep3(false));
+      }
+      const craftDescription = document.getElementById('craftDescription');
+      if (craftDescription) {
+        craftDescription.addEventListener('input', () => validateStep3(false));
+        craftDescription.addEventListener('blur', () => validateStep3(true));
+      }
+      const shgDeclaration = document.getElementById('shgDeclaration');
+      if (shgDeclaration) {
+        shgDeclaration.addEventListener('change', () => validateStep3(false));
+      }
+    });
+  </script>
+
+  <!-- Slide-out Wishlist Drawer -->
+  <div class="wishlist-drawer-overlay">
+    <div class="wishlist-drawer">
+      <div class="wishlist-header">
+        <h3>
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" style="color:#EF4444;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          Your Saved Wishlist (<span class="wishlist-count-badge">0</span>)
+        </h3>
+        <button type="button" class="wishlist-close-btn" aria-label="Close Wishlist">&times;</button>
+      </div>
+
+      <div class="wishlist-impact-notice">
+        <span>❤️</span>
+        <span>Handcrafted treasures saved by you, directly supporting rural women makers.</span>
+      </div>
+
+      <div class="wishlist-items-list"></div>
+
+      <div class="wishlist-footer">
+        <button type="button" class="btn btn-primary btn-block wishlist-move-all-btn" onclick="moveAllWishlistToCart()">
+          Move All to Artisan Bag 🛍️
+        </button>
+        <button type="button" class="btn btn-secondary btn-block wishlist-view-catalog-btn" onclick="viewWishlistInCatalog()">
+          View Wishlist in Catalog Grid 🔍
+        </button>
+        <div style="text-align:center; margin-top:0.4rem;">
+          <button type="button" class="wishlist-clear-btn" onclick="clearWishlist()" style="background:none; border:none; color:var(--text-muted); font-size:0.8rem; cursor:pointer; text-decoration:underline;">
+            Clear All Wishlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3>
+          <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          Your Artisan Cart
+        </h3>
+        <button type="button" class="cart-close-btn">&times;</button>
+      </div>
+      <div class="cart-impact-notice">
+        <span>🤝</span>
+        <span>100% of proceeds go directly to rural women artisans.</span>
+      </div>
+      <div class="cart-items-list"></div>
+      <div class="cart-footer">
+        <div class="cart-summary-line">
+          <span>Subtotal</span>
+          <span class="cart-subtotal-val">₹0</span>
+        </div>
+        <div class="cart-summary-line">
+          <span>Shipping (Pan-India)</span>
+          <span class="cart-shipping-val">FREE</span>
+        </div>
+        <div class="cart-summary-line total">
+          <span>Grand Total</span>
+          <span class="cart-total-val">₹0</span>
+        </div>
+        <button type="button" class="btn btn-primary btn-block cart-checkout-btn">
+          Proceed to Fair Trade Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

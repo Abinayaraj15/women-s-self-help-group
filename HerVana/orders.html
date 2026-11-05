@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders | HerVana SHG Portal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="apple-touch-icon" href="images/logo-icon.svg">
+</head>
+<body class="dashboard-body">
+
+    <!-- Dashboard Sidebar -->
+  <aside class="dash-sidebar">
+    <div class="dash-sidebar-brand">
+      <a href="index.html" class="dash-brand-link">
+        <img src="images/logo-white.svg" alt="HerVana" style="height:38px;">
+      </a>
+      <div class="dash-brand-portal">ARTISAN PORTAL</div>
+    </div>
+
+    <!-- SHG Profile Badge -->
+    <div class="sidebar-shg-badge">
+      <img src="images/women/artisan-radha.jpg" alt="Radha Devi" class="shg-avatar">
+      <div class="shg-meta">
+        <div class="shg-name">Radhika Mahila Samiti</div>
+        <div class="shg-cluster">Kanchipuram, Tamil Nadu</div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="sidebar-menu">
+      <div class="menu-category-title">Core Management</div>
+      <a href="dashboard.html" class="sidebar-menu-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+        <span>Overview</span>
+      </a>
+      <a href="orders.html" class="sidebar-menu-link active">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        <span>Orders & Dispatch</span>
+        <span class="menu-badge">8 New</span>
+      </a>
+      <a href="earnings.html" class="sidebar-menu-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span>Earnings & Payouts</span>
+      </a>
+      <a href="products.html" class="sidebar-menu-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+        <span>Catalog & Stock</span>
+      </a>
+
+      <div class="menu-category-title">Community & Support</div>
+      <a href="index.html" class="sidebar-menu-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        <span>Preview Public Store</span>
+      </a>
+      <a href="join-us.html" class="sidebar-menu-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        <span>SHG Support & Training</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="login.html">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+        <span>Sign Out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="dash-main-wrapper">
+    <!-- Top Header -->
+    <header class="dash-header">
+      <div class="dash-header-left">
+        <button type="button" class="dash-sidebar-toggle-btn" aria-label="Toggle menu">☰</button>
+        <h1 class="dash-page-title">Orders & Village Dispatch Management</h1>
+      </div>
+
+      <div class="dash-header-right">
+        <!-- RTL Toggle Button -->
+        <button type="button" class="dash-icon-action rtl-toggle-btn" title="Toggle RTL / LTR Direction" aria-label="Toggle RTL layout direction">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+        </button>
+
+        <!-- Dark / Light Theme Toggle Button -->
+        <button type="button" class="dash-icon-action theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle Dark and Light theme">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Interactive Date Filter Dropdown Button -->
+        <div class="dash-dropdown-wrapper">
+          <button type="button" class="dash-date-badge" id="dateFilterBtn" onclick="toggleDateFilterMenu(event)" title="Click to filter by date range" aria-label="Filter by date range">
+            <span style="font-size:1rem; line-height:1;">📅</span>
+            <span id="activeDateFilterText">Last 30 Days: Nov 2026</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-left:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dash-menu-dropdown" id="dateFilterDropdown" style="display:none;">
+            <div class="dash-dropdown-header">Filter Performance Range</div>
+            <button type="button" class="dash-dropdown-item active" onclick="selectDateRange('Last 30 Days: Nov 2026', this)">
+              <span>Last 30 Days: Nov 2026</span>
+              <span class="check-mark">✓</span>
+            </button>
+            <button type="button" class="dash-dropdown-item" onclick="selectDateRange('Last 7 Days (Oct 29 – Nov 05)', this)">
+              <span>Last 7 Days (Oct 29 – Nov 05)</span>
+              <span class="check-mark"></span>
+            </button>
+            <button type="button" class="dash-dropdown-item" onclick="selectDateRange('This Month (Nov 2026)', this)">
+              <span>This Month (Nov 2026)</span>
+              <span class="check-mark"></span>
+            </button>
+            <button type="button" class="dash-dropdown-item" onclick="selectDateRange('Previous Month (Oct 2026)', this)">
+              <span>Previous Month (Oct 2026)</span>
+              <span class="check-mark"></span>
+            </button>
+            <button type="button" class="dash-dropdown-item" onclick="selectDateRange('Year to Date: 2026', this)">
+              <span>Year to Date: 2026</span>
+              <span class="check-mark"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Notification Bell Dropdown Button -->
+        <div class="dash-dropdown-wrapper">
+          <button type="button" class="dash-icon-action" id="notifBellBtn" onclick="toggleNotificationMenu(event)" title="8 Unread Artisan Notifications" aria-label="View notifications">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            <div class="dash-icon-dot" id="headerNotifDot"></div>
+          </button>
+          <div class="dash-notif-dropdown" id="notifDropdown" style="display:none;">
+            <div class="dash-notif-header">
+              <div>
+                <strong style="font-size:0.92rem; font-weight:800;">Cooperative Notifications</strong>
+                <span class="badge-pill badge-primary" id="notifCountBadge" style="font-size:0.72rem; padding:2px 7px; margin-left:6px;">8 New</span>
+              </div>
+              <button type="button" class="dash-notif-mark-read" onclick="markAllNotificationsRead(event)">Mark all read</button>
+            </div>
+            <div class="dash-notif-list" id="notifList">
+              <div class="dash-notif-item unread" onclick="handleNotifClick('orders')">
+                <div class="dash-notif-icon">🛍️</div>
+                <div class="dash-notif-content">
+                  <div class="dash-notif-title">8 Orders Pending Dispatch</div>
+                  <div class="dash-notif-text">Postal courier pickup scheduled today for 5 sarees and 3 terracotta sets.</div>
+                  <div class="dash-notif-time">12 mins ago</div>
+                </div>
+              </div>
+              <div class="dash-notif-item unread" onclick="handleNotifClick('earnings')">
+                <div class="dash-notif-icon">💰</div>
+                <div class="dash-notif-content">
+                  <div class="dash-notif-title">PFMS Payout Settled: ₹45,000</div>
+                  <div class="dash-notif-text">Village cooperative credit transferred into Radhika Mahila Samiti SBI account.</div>
+                  <div class="dash-notif-time">2 hours ago</div>
+                </div>
+              </div>
+              <div class="dash-notif-item unread" onclick="handleNotifClick('orders')">
+                <div class="dash-notif-icon">📦</div>
+                <div class="dash-notif-content">
+                  <div class="dash-notif-title">Patron Delivery Confirmation</div>
+                  <div class="dash-notif-text">Order #ORD-8419 delivered safely to patron in Bengaluru. 5-star review received!</div>
+                  <div class="dash-notif-time">5 hours ago</div>
+                </div>
+              </div>
+              <div class="dash-notif-item unread" onclick="handleNotifClick('stock')">
+                <div class="dash-notif-icon">📈</div>
+                <div class="dash-notif-content">
+                  <div class="dash-notif-title">Festive Demand Surge Detected</div>
+                  <div class="dash-notif-text">Chanderi Silk views up 34% this week for festive wedding season orders.</div>
+                  <div class="dash-notif-time">1 day ago</div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-notif-footer">
+              <a href="orders.html" style="text-decoration:none; color:var(--dash-primary); font-weight:700; font-size:0.82rem;">View All Active Dispatches →</a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Print manifest ready for India Post courier pickup.', 'success')">
+          <span>🖨️ Print Manifest</span>
+        </button>
+        <a href="index.html" class="btn btn-secondary btn-sm">View Live Store</a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      
+      <!-- Order Filter Tabs -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <div class="order-pill-group" style="display:flex; gap:0.5rem; background:var(--dash-card-bg); padding:4px; border-radius:9999px; border:1px solid var(--dash-border);">
+          <button type="button" class="btn btn-sm btn-primary active" onclick="filterOrderTable('all', this)">All Orders (46)</button>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="filterOrderTable('processing', this)">Processing (8)</button>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="filterOrderTable('shipped', this)">Shipped (14)</button>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="filterOrderTable('delivered', this)">Delivered (22)</button>
+        </div>
+
+        <div style="max-width:320px; width:100%; position:relative;">
+          <input type="text" id="orderSearchInput" class="form-control" placeholder="Search by Order ID or Patron..." onkeyup="searchOrders(this.value)">
+        </div>
+      </div>
+
+      <!-- Orders Table -->
+      <div class="dash-card">
+        <div class="dash-table-wrap">
+          <table class="dash-table" id="ordersMasterTable">
+            <thead>
+              <tr>
+                <th>Order ID & Date</th>
+                <th>Patron Details</th>
+                <th>Handcrafted Products</th>
+                <th>Total Value</th>
+                <th>Payment</th>
+                <th>Fulfillment Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9842</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Today, 09:30 AM</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Priya Sundaram</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Indiranagar, Bengaluru, KA</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/handloom-saree.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Chanderi Zari Silk Saree (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹2,499</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 2 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9841</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Yesterday, 04:15 PM</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Vikramaditya Rao</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Jubilee Hills, Hyderabad, TS</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/terracotta-vases.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Warli Terracotta Vase Set (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,798</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 3 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9839</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Yesterday, 02:40 PM</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Shruti Sharma</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">C-Scheme, Jaipur, RJ</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/jaipur-blue-pottery.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Jaipur Blue Pottery Ceramic Platter (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,450</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 4 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9838</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 03, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Rohan Mukhopadhyay</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Salt Lake Sector V, Kolkata, WB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/dhokra-brass-bangles.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Dhokra Brass Tribal Bangles (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,598</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (NetBank)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 5 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9835</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 03, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Lakshmi Narayanan</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Mylapore, Chennai, TN</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/kanchipuram-saree.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Authentic Kanchipuram Pattu Saree (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹4,850</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 6 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9834</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 02, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Divya Mathur</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Sector 17, Chandigarh, CH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/phulkari-stole.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Phulkari Handcrafted Festive Stole (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,650</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 7 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9831</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 02, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Farooq Abdullah</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Rajbagh, Srinagar, JK</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/kashmiri-stole.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Kashmiri Aari Embroidered Woolen Shawl (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹3,499</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 8 -->
+              <tr data-status="processing">
+                <td>
+                  <strong>#HV-9829</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 01, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Bhavna Patel</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Navrangpura, Ahmedabad, GJ</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/clay-kulhad-set.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Clay Kulhad Chai Cups Gift Set (x6)</span>
+                  </div>
+                </td>
+                <td><strong>₹599</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill processing">Processing</span></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Shipped
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 9 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9840</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 02, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Anand Kapoor</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Vasant Kunj, New Delhi, DL</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/organic-turmeric-honey.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Wild Forest Honey (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,100</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 10 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9837</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 02, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Sunita Reddy</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">MVP Colony, Visakhapatnam, AP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/pochampally-saree.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Pochampally Ikat Pure Cotton Silk Saree (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹2,150</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 11 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9833</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 01, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Amitava Sen</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Ballygunge, Kolkata, WB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/terracotta-handi.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Terracotta Traditional Cooking Handi (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹899</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 12 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9832</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Nov 01, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Kavita Joshi</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Bandra West, Mumbai, MH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/terracotta-jewellery.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Terracotta Floral Jewellery Set (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹799</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (NetBank)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 13 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9830</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 31, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Rajeshwari Nair</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Panampilly Nagar, Kochi, KL</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/guntur-chilli-spices.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Guntur Sun-Dried Red Chilli Spices (x3)</span>
+                  </div>
+                </td>
+                <td><strong>₹747</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 14 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9828</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 31, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Tarun Singhania</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">DLF Phase 5, Gurugram, HR</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/brass-diya.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Brass Peacock Handcrafted Pooja Diya (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,299</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 15 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9827</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 30, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Shalini Verma</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Gomti Nagar, Lucknow, UP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/channapatna-toys.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Channapatna Wooden Traditional Toys Set (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹950</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 16 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9826</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 30, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Deepa Swaminathan</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">RS Puram, Coimbatore, TN</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/coconut-shell-bowls.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Coconut Shell Polished Eco Bowls (x4)</span>
+                  </div>
+                </td>
+                <td><strong>₹680</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 17 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9825</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 29, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Alok Sengupta</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Saheed Nagar, Bhubaneswar, OD</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/cold-pressed-coconut-oil.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Cold-Pressed Virgin Coconut Oil (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹780</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 18 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9824</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 29, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Monika Banerjee</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Pradhan Nagar, Siliguri, WB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/copper-carafe-set.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Hammered Pure Copper Ayurvedic Carafe (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,550</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 19 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9823</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 28, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Harshavardhan Kale</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Ramdaspeth, Nagpur, MH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/cotton-dupatta.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Hand Block-Printed Mulmul Dupatta (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹890</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (NetBank)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 20 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9822</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 28, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Radhika Chawla</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Mall Road, Amritsar, PB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/embroidery-cushions.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Embroidered Kashmiri Cushion Covers (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,190</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 21 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9821</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 27, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Neha Agrawal</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Vijay Nagar, Indore, MP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/banarasi-chilli-pickle.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Banarasi Stuffed Red Chilli Pickle (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹640</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 22 -->
+              <tr data-status="shipped">
+                <td>
+                  <strong>#HV-9820</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 27, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Preeti Saxena</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Sector 62, Noida, UP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/himalayan-honey.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Raw Himalayan Acacia Wild Honey (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹750</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill shipped">Shipped</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-update-order-status" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Mark Delivered
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 23 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9836</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 30, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Meera Deshmukh</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Kothrud, Pune, MH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/kundan-earrings.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Kundan Chandbali (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,298</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (NetBank)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9836.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 24 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9819</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 26, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Sanjay Malhotra</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Colaba, Mumbai, MH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/handloom-saree.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Handwoven Chanderi Zari Silk Saree (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹2,499</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9819.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 25 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9818</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 25, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Ananya Mukherjee</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Alipore, Kolkata, WB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/oxidised-hasli-necklace.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Oxidised Silver Tribal Hasli Necklace (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,150</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9818.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 26 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9817</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 25, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Karthik Subramanian</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Adyar, Chennai, TN</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/tribal-painting.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Madhubani Hand-Painted Canvas Art (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,850</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9817.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 27 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9816</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 24, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Sangeeta Hegde</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Kadri, Mangaluru, KA</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/jute-tote-bag.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Golden Jute Handcrafted Market Tote (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹699</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9816.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 28 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9815</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 24, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Devendra Rathore</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Panchwati, Udaipur, RJ</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/ayurvedic-soaps.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Ayurvedic Triphala & Neem Soaps (x4)</span>
+                  </div>
+                </td>
+                <td><strong>₹720</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9815.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 29 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9814</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 23, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Poonam Batra</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Greater Kailash, New Delhi, DL</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/kumkumadi-oil.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Kumkumadi Miraculous Night Serum (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,350</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9814.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 30 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9813</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 23, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Vinod Pillai</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Kowdiar, Thiruvananthapuram, KL</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/bamboo-baskets.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Natural Bamboo Multipurpose Basket (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹920</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9813.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 31 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9812</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 22, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Archana Kulkarni</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">College Road, Nashik, MH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/brass-diya.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Traditional Brass Hanging Diya (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,100</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (NetBank)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9812.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 32 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9811</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 22, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Rajeev Nambiar</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">East Fort, Thrissur, KL</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/kanchipuram-saree.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Authentic Kanchipuram Pattu Saree (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹4,850</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9811.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 33 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9810</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 21, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Nandini Bhardwaj</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Rajpur Road, Dehradun, UK</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/phulkari-stole.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Phulkari Floral Festive Stole (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,650</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9810.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 34 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9809</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 21, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Siddharth Ghosh</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Park Circus, Kolkata, WB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/kashmiri-stole.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Kashmiri Aari Embroidered Shawl (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹3,499</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9809.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 35 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9808</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 20, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Pallavi Tiwari</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Assi Ghat, Varanasi, UP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/pochampally-saree.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Pochampally Ikat Pure Cotton Saree (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹2,150</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9808.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 36 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9807</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 20, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Maheshwari Devi</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">KK Nagar, Madurai, TN</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/jaipur-blue-pottery.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Jaipur Blue Pottery Ceramic Vase (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,350</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9807.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 37 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9806</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 19, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Gaurav Chhabra</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Model Town, Ludhiana, PB</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/dhokra-brass-bangles.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Dhokra Brass Miniature Figurine (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,490</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (NetBank)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9806.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 38 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9805</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 19, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Rashmi Goswami</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Ulubari, Guwahati, AS</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/clay-kulhad-set.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Clay Kulhad Chai Set (x6)</span>
+                  </div>
+                </td>
+                <td><strong>₹599</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9805.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 39 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9804</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 18, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Arvind Swamy</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Fairlands, Salem, TN</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/terracotta-handi.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Terracotta Cooking Handi (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹899</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9804.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 40 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9803</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 18, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Sunaina Mishra</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Arera Colony, Bhopal, MP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/terracotta-vases.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Warli Terracotta Vase Set (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,798</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (Card)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9803.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 41 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9802</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 17, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Jitendra Solanki</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Athwa Lines, Surat, GJ</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/organic-turmeric-honey.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Wild Raw Forest Honey (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹1,100</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9802.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 42 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9801</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 17, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Tanvi Dave</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Alkapuri, Vadodara, GJ</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/ubtan-scrub-rosewater.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Ayurvedic Ubtan Glow Scrub & Rosewater (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹850</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9801.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 43 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9800</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 16, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Pradeep Choudhury</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Harmu Colony, Ranchi, JH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/homemade-pickles.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Banarasi Stuffed Red Chilli Homemade Pickle (x2)</span>
+                  </div>
+                </td>
+                <td><strong>₹640</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9800.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 44 -->
+              <tr data-status="delivered">
+                <td>
+                  <strong>#HV-9799</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 16, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Shalini Mahajan</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">The Ridge, Shimla, HP</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/channapatna-toys.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Channapatna Wooden Handcrafted Toy (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹780</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Prepaid (UPI)</span></td>
+                <td><span class="status-pill delivered">Delivered</span></td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Invoice downloaded for #HV-9799.', 'success')" style="padding:0.35rem 0.65rem; font-size:0.78rem;">
+                    Invoice
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 45 -->
+              <tr data-status="cancelled">
+                <td>
+                  <strong>#HV-9798</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 15, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Nitin Gadkari</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Civil Lines, Nagpur, MH</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/brass-diya.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Brass Temple Pooja Aarti Bell (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹650</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Refunded (Card)</span></td>
+                <td><span class="status-pill cancelled">Cancelled</span></td>
+                <td>
+                  <span style="font-size:0.75rem; color:var(--dash-text-muted); font-weight:600;">Refunded</span>
+                </td>
+              </tr>
+              <!-- Row 46 -->
+              <tr data-status="cancelled">
+                <td>
+                  <strong>#HV-9797</strong>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Oct 15, 2026</div>
+                </td>
+                <td>
+                  <div class="order-customer-name" style="font-weight:700; color:var(--dash-text-dark);">Anjali Menon</div>
+                  <div class="order-customer-loc" style="font-size:0.75rem; color:var(--dash-text-muted);">Marine Drive, Ernakulam, KL</div>
+                </td>
+                <td>
+                  <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="images/products/cotton-dupatta.jpg" alt="Product" style="width:36px; height:36px; border-radius:6px; object-fit:cover;">
+                    <span class="order-item-title" style="font-size:0.85rem; font-weight:600; color:var(--dash-text-dark);">Handloom Cotton Kasavu Dupatta (x1)</span>
+                  </div>
+                </td>
+                <td><strong>₹920</strong></td>
+                <td><span style="font-size:0.75rem; color:#10B981; font-weight:700;">Refunded (UPI)</span></td>
+                <td><span class="status-pill cancelled">Cancelled</span></td>
+                <td>
+                  <span style="font-size:0.75rem; color:var(--dash-text-muted); font-weight:600;">Refunded</span>
+                </td>
+              </tr>
+</tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Dashboard Footer with Social Links -->
+      <footer class="dash-footer">
+        <div class="dash-footer-left">
+          <span>&copy; 2026 HerVana SHG Cooperative Marketplace &bull; Verified NRLM Fair Trade Certified</span>
+        </div>
+        <div class="dash-footer-socials">
+          <a href="https://instagram.com" class="dash-social-link" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" class="dash-social-link" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+          </a>
+          <a href="https://youtube.com" class="dash-social-link" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://twitter.com" class="dash-social-link" title="X (Twitter)" aria-label="X (Twitter)" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" class="dash-social-link" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script>
+    function filterOrderTable(status, btn) {
+      const pillGroup = (btn && btn.closest('.order-pill-group')) || document.querySelector('.order-pill-group');
+      if (pillGroup) {
+        pillGroup.querySelectorAll('button').forEach(b => {
+          b.classList.remove('btn-primary', 'active');
+          b.classList.add('btn-secondary');
+        });
+      }
+      if (btn) {
+        btn.classList.remove('btn-secondary');
+        btn.classList.add('btn-primary', 'active');
+      }
+
+      const rows = document.querySelectorAll('#ordersMasterTable tbody tr:not(#ordersEmptyStateRow)');
+      let matchCount = 0;
+      rows.forEach(r => {
+        const rowStatus = (r.getAttribute('data-status') || '').toLowerCase();
+        if (status === 'all' || rowStatus === status) {
+          r.style.display = '';
+          matchCount++;
+        } else {
+          r.style.display = 'none';
+        }
+      });
+
+      let emptyRow = document.getElementById('ordersEmptyStateRow');
+      const tbody = document.querySelector('#ordersMasterTable tbody');
+      if (matchCount === 0) {
+        if (!emptyRow && tbody) {
+          emptyRow = document.createElement('tr');
+          emptyRow.id = 'ordersEmptyStateRow';
+          emptyRow.innerHTML = `<td colspan="7" style="text-align:center; padding:3rem 1.5rem; color:var(--dash-text-muted); font-weight:600;">No orders found in "${status}" state.</td>`;
+          tbody.appendChild(emptyRow);
+        } else if (emptyRow) {
+          emptyRow.style.display = '';
+          emptyRow.querySelector('td').textContent = `No orders found in "${status}" state.`;
+        }
+      } else if (emptyRow) {
+        emptyRow.style.display = 'none';
+      }
+    }
+
+    function searchOrders(val) {
+      val = (val || '').toLowerCase().trim();
+      const rows = document.querySelectorAll('#ordersMasterTable tbody tr:not(#ordersEmptyStateRow)');
+      let matchCount = 0;
+      rows.forEach(r => {
+        const text = r.textContent.toLowerCase();
+        if (!val || text.includes(val)) {
+          r.style.display = '';
+          matchCount++;
+        } else {
+          r.style.display = 'none';
+        }
+      });
+
+      let emptyRow = document.getElementById('ordersEmptyStateRow');
+      const tbody = document.querySelector('#ordersMasterTable tbody');
+      if (matchCount === 0) {
+        if (!emptyRow && tbody) {
+          emptyRow = document.createElement('tr');
+          emptyRow.id = 'ordersEmptyStateRow';
+          emptyRow.innerHTML = `<td colspan="7" style="text-align:center; padding:3rem 1.5rem; color:var(--dash-text-muted); font-weight:600;">No orders matching "${val}".</td>`;
+          tbody.appendChild(emptyRow);
+        } else if (emptyRow) {
+          emptyRow.style.display = '';
+          emptyRow.querySelector('td').textContent = `No orders matching "${val}".`;
+        }
+      } else if (emptyRow) {
+        emptyRow.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
