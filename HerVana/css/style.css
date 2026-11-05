@@ -15858,145 +15858,76 @@ ul, ol {
 
 
 .artisan-location {
-
-
-
   font-size: 0.72rem !important;
-
-
-
   color: var(--text-muted) !important;
-
-
-
   white-space: nowrap !important;
-
-
-
   flex-shrink: 0 !important;
-
-
-
   margin-left: auto !important;
-
-
-
 }
 
-
-
-
-
-
-
+.product-card h3,
+.product-content h3,
 .product-name {
-
-
-
   font-size: 0.95rem !important;
-
-
-
   font-weight: 700 !important;
-
-
-
   line-height: 1.35 !important;
-
-
-
   margin-bottom: 0.45rem !important;
-
-
-
   height: 2.6rem !important;
-
-
-
+  min-height: 2.6rem !important;
+  max-height: 2.6rem !important;
   display: -webkit-box !important;
-
-
-
   -webkit-line-clamp: 2 !important;
-
-
-
   -webkit-box-orient: vertical !important;
-
-
-
   overflow: hidden !important;
-
-
-
 }
 
-
-
-
-
-
+.product-card h3 a,
+.product-content h3 a,
+.product-name a {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
 
 .product-rating {
-
-
-
   display: flex !important;
-
-
-
   align-items: center !important;
-
-
-
   gap: 0.35rem !important;
-
-
-
   margin-bottom: 0.75rem !important;
-
-
-
   height: 1.25rem !important;
-
-
-
 }
 
+.product-rating .stars {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #F59E0B !important;
+  font-size: 0.85rem !important;
+  line-height: 1 !important;
+}
 
+.product-rating .rating-num {
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
 
-
-
-
+.product-rating .reviews-count {
+  font-size: 0.75rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1 !important;
+}
 
 .product-footer-price {
-
-
-
   display: flex !important;
-
-
-
   align-items: center !important;
-
-
-
   justify-content: space-between !important;
-
-
-
   margin-top: auto !important;
-
-
-
   padding-top: 0.5rem !important;
-
-
-
   border-top: 1px dashed var(--border-color) !important;
-
-
-
+  min-height: 2.5rem !important;
 }
 
 
