@@ -14,7 +14,7 @@
 
   
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20261112-catalog">
 
   <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
   <link rel="apple-touch-icon" href="images/logo-icon.svg">
@@ -354,9 +354,20 @@
 
   <!-- Main Catalog Content -->
 
-  <main id="categories" class="section-padding" style="padding-top: 2rem;">
+  <main id="categories" class="section-padding" style="padding-top: 3.25rem; padding-bottom: 4.5rem;">
 
     <div class="container">
+
+      <!-- Rearranged Catalog Section Heading & Results Count -->
+      <div class="catalog-section-header">
+        <div class="catalog-heading-group">
+          <span class="catalog-eyebrow">Direct From Rural Women SHGs</span>
+          <h2 class="catalog-main-heading">Handcrafted Marketplace Catalog</h2>
+        </div>
+        <div class="catalog-results-count">
+          Showing <strong>30 products found</strong>
+        </div>
+      </div>
 
       <div class="catalog-layout">
 
@@ -532,20 +543,16 @@
 
         <div>
 
-          <!-- Toolbar -->
+          <!-- Toolbar (Search & Sort) -->
 
-          <div class="catalog-toolbar" style="display:flex; justify-content:space-between; align-items:center; gap:1.25rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+          <div class="catalog-toolbar" style="display:flex; justify-content:space-between; align-items:center; gap:1.25rem; flex-wrap:wrap; margin-bottom:1.75rem; padding:1rem 1.35rem;">
 
-            <div style="position:relative; min-width:240px; flex:1; max-width:360px;">
+            <div style="position:relative; min-width:240px; flex:1; max-width:420px;">
 
-              <input type="text" id="catalogSearch" placeholder="Search handcrafted creations..." style="width:100%; padding:0.5rem 1rem 0.5rem 2.2rem; border:1px solid var(--border-color); border-radius:var(--radius-pill); font-size:0.88rem; background:var(--bg-card); color:var(--text-main); outline:none;">
+              <input type="text" id="catalogSearch" placeholder="Search handcrafted creations..." style="width:100%; padding:0.55rem 1rem 0.55rem 2.35rem; border:1px solid var(--border-color); border-radius:var(--radius-pill); font-size:0.88rem; background:var(--bg-card); color:var(--text-main); outline:none;">
 
-              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="position:absolute; left:0.8rem; top:50%; transform:translateY(-50%); color:var(--text-muted); pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="position:absolute; left:0.85rem; top:50%; transform:translateY(-50%); color:var(--text-muted); pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
 
-            </div>
-
-            <div class="catalog-results-count">
-              Showing <strong>30 products found</strong>
             </div>
 
             <div style="display:flex; align-items:center; gap:0.75rem;">
@@ -569,7 +576,7 @@
 
 
                     <!-- Category Quick Selection Pills (30 Items Total across 7 Sections) -->
-          <div class="category-pills-strip" style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+          <div class="category-pills-strip" style="display:flex; gap:0.65rem; flex-wrap:wrap; margin-bottom:2rem;">
             <button type="button" class="category-quick-pill wishlist-quick-pill" data-cat="wishlist" title="View Wishlisted Products" style="padding:0.45rem 1.1rem; border-radius:var(--radius-pill); font-size:0.85rem; font-weight:700; border:1px solid #EF4444; background:var(--bg-surface); color:#EF4444; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;"><span>❤️</span> Wishlist (<span class="wishlist-count-badge">2</span>)</button>
             <button type="button" class="category-quick-pill active" data-cat="all" style="padding:0.45rem 1rem; border-radius:var(--radius-pill); font-size:0.85rem; font-weight:700; border:1px solid var(--primary); background:var(--primary); color:#FFFFFF; cursor:pointer;">All Creations (30)</button>
             <button type="button" class="category-quick-pill" data-cat="textiles" style="padding:0.45rem 1rem; border-radius:var(--radius-pill); font-size:0.85rem; font-weight:600; border:1px solid var(--border-color); background:var(--bg-surface); color:var(--text-main); cursor:pointer;">Handloom & Sarees (5)</button>

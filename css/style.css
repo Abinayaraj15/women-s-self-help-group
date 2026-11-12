@@ -9300,26 +9300,41 @@ ul, ol {
 
 
 
+.catalog-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.catalog-eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  margin-bottom: 0.35rem;
+}
+
+.catalog-main-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.5vw, 2.05rem);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin: 0;
+}
+
 .catalog-layout {
-
-
-
   display: grid;
-
-
-
   grid-template-columns: 270px 1fr;
-
-
-
-  gap: 2rem;
-
-
-
+  gap: 2.25rem;
   align-items: start;
-
-
-
 }
 
 
@@ -9561,69 +9576,35 @@ ul, ol {
 
 
 .catalog-toolbar {
-
-
-
   background: #FFFFFF;
-
-
-
   border: 1px solid var(--border-color);
-
-
-
   border-radius: var(--radius-md);
-
-
-
-  padding: 0.85rem 1.25rem;
-
-
-
+  padding: 1rem 1.35rem;
   display: flex;
-
-
-
   align-items: center;
-
-
-
   justify-content: space-between;
-
-
-
-  margin-bottom: 1.5rem;
-
-
-
+  margin-bottom: 1.75rem;
   flex-wrap: wrap;
-
-
-
-  gap: 1rem;
-
-
-
+  gap: 1.25rem;
 }
 
-
-
-
-
-
-
 .catalog-results-count {
-
-
-
   font-size: 0.9rem;
-
-
-
   color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
 
-
-
+@media (max-width: 768px) {
+  .catalog-section-header {
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 
