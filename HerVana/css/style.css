@@ -15183,26 +15183,44 @@ ul, ol {
 
 
 
-[data-theme="dark"] .form-control.is-invalid {
-
-
-
-  background-color: rgba(239, 68, 68, 0.1) !important;
-
-
-
+select option,
+select.form-control option {
+  background-color: #FFFFFF;
+  color: #1E293B;
 }
 
+[data-theme="dark"] select,
+[data-theme="dark"] select.form-control,
+[data-theme="dark"] .catalog-sort-select {
+  color-scheme: dark;
+  background-color: #162032;
+  color: #F8FAFC;
+}
 
+[data-theme="dark"] select option,
+[data-theme="dark"] select.form-control option,
+[data-theme="dark"] .catalog-sort-select option,
+[data-theme="dark"] select optgroup {
+  background-color: #1E293B !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .form-control.is-invalid {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
 
 [data-theme="dark"] .form-control.is-valid {
-
-
-
   background-color: rgba(16, 185, 129, 0.1) !important;
+}
 
+[data-theme="dark"] select.form-control.is-invalid {
+  background-color: #2A1822 !important;
+  color: #F8FAFC !important;
+}
 
-
+[data-theme="dark"] select.form-control.is-valid {
+  background-color: #132A24 !important;
+  color: #F8FAFC !important;
 }
 
 
