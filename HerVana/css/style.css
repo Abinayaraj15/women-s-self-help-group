@@ -11358,6 +11358,39 @@ ul, ol {
 
 }
 
+.footer-contact-info {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #9CA3AF;
+}
+
+.footer-contact-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--primary);
+  margin-top: 2px;
+}
+
+.footer-contact-item a {
+  color: #9CA3AF;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-item a:hover {
+  color: #F59E0B;
+}
+
 
 
 
