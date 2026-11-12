@@ -201,13 +201,14 @@ body.dashboard-body {
 .sidebar-menu-link {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.75rem 1rem;
+  gap: 0.65rem;
+  padding: 0.72rem 0.85rem;
   border-radius: 8px;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--dash-sidebar-text);
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 .sidebar-menu-link:hover {
   background: var(--dash-sidebar-hover);
@@ -221,14 +222,28 @@ body.dashboard-body {
   flex-shrink: 0;
   font-size: 1.2rem;
 }
+.sidebar-menu-link > span:not(.menu-badge) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu-badge {
   margin-left: auto;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  padding: 0.15rem 0.5rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 9999px;
   background: var(--dash-gold);
   color: #1E293B;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+}
+[dir="rtl"] .menu-badge {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .sidebar-footer {
